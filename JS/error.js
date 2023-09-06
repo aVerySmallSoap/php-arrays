@@ -1,3 +1,4 @@
+// noinspection JSUnusedGlobalSymbols
 function throwAlert(emphasized, message, status){
     let parent = document.querySelector(".right-container");
     let div = document.createElement("div");

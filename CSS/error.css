@@ -1,3 +1,8 @@
+/*noinspection CssUnusedSymbol*/
+.alert-container{
+    flex: 1 0 100%;
+}
+
 .message-container{
     display: flex;
     padding: 15px;

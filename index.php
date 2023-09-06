@@ -35,7 +35,9 @@ if(!isset($_SESSION["myArray"])) {
         </div>
         <div class="left-container">
             <form action="./operations/addOnArray.php" method="post" id="array-form">
-                <input type="text" name="input">
+                <label>
+                    <input type="text" name="input">
+                </label>
                 <div class="form-control">
                     <button type="submit" class="btn" id="btn-add">Add</button>
                 </div>
@@ -45,6 +47,7 @@ if(!isset($_SESSION["myArray"])) {
         <div class="right-container">
             <div class="selection-container">
                 <form action="./operations/deleteOnArray.php" method="post" id="array-deletion-form">
+                    <label for="array-selector"></label>
                     <select name="mySelect" id="array-selector">
                         <option value=""></option>
                         <?php
