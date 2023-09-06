@@ -1,0 +1,94 @@
+#moon{
+    fill: none;
+    transform: rotateZ(24deg);
+    position: relative;
+    animation: "IamMoon" 10s;
+}
+
+@keyframes IamMoon {
+    from{
+        opacity: 0;
+        left: -300px;
+    }
+    to{
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.container{
+    display: inline-flex;
+    padding: 15px;
+    width: calc(50% + 10vw);
+    grid-column: 2 / 4;
+    grid-row: 2 / 2;
+    border-radius: 25px;
+    box-shadow: -1px 3px 3px 2px rgba(0,0,0,25%);
+    background-color: color-mix(in srgb, #FAF3F0, white 25%);
+}
+
+.left-container{
+    flex: 1 0 25%;
+}
+
+#array-form{
+    display: grid;
+}
+
+#array-form input{
+    align-self: center;
+    margin: 5px 25px 5px 25px;
+    padding: 5px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.form-control{
+    display: flex;
+    margin-left: 30px;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 5px;
+}
+
+.in-the-middle{
+    flex: 1 0 50%;
+    max-width: 0;
+    margin: 10px 25px 10px 25px;
+}
+
+.right-container{
+    display: grid;
+    flex-wrap: wrap;
+    flex: 1 0 25%;
+    grid-template: 45% 55% / none;
+}
+
+.selection-container{
+    display: flex;
+    flex: 1 0 100%;
+}
+
+#array-selector{
+    appearance: none;
+    margin: 5px 25px 5px 25px;
+    width: 100%;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 3px 3px 1px rgba(0,0,0,25%);
+}
+
+#array-deletion-form{
+    display: flex;
+    width: 100%;
+}
+
+.alert-container{
+    flex: 1 0 100%;
+}
