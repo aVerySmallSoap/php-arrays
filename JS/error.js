@@ -3,7 +3,7 @@ function throwAlert(emphasized, message, status){
     let div = document.createElement("div");
     div.className = "alert-container";
     div.innerHTML = "<div class='message-container'>" +
-        "<span class='emphasized'>"+emphasized+"!&nbsp</span>" +
+        "<span class='emphasized'>"+emphasized+"&nbsp</span>" +
         "<span class='message'>"+message+"</span>" +
         "</div>"
 

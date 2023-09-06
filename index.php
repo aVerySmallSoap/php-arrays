@@ -51,6 +51,10 @@ if(!isset($_SESSION["myArray"])) {
                         }
                         ?>
                     </select>
+                    <button type="submit" formaction="./operations/selectOnArray.php" formmethod="post"
+                            class="btn" id="btn-delete">
+                        Display
+                    </button>
                     <button type="submit" class="btn" id="btn-delete">Delete</button>
                 </form>
             </div>
@@ -60,14 +64,16 @@ if(!isset($_SESSION["myArray"])) {
     <script src="./JS/error.js"></script>
 </body>
 </html>
-
 <?php
 if(isset($_SESSION["status"])){
-    if($_SESSION["status"] === "added"){
-        echo "<script>throwAlert('Success', 'Entry successfully added!', 'green')</script>";
-    }else if($_SESSION["status"] === "deleted"){
-        echo "<script>throwAlert('Success', 'Entry successfully deleted!', 'green')</script>";
-    }else{
-        echo "<script>throwAlert('Error', 'Invalid entry!')</script>";
-    }
+    echo match ($_SESSION["status"]) {
+        "added" => "<script>throwAlert('Success!', 'Entry successfully added!', 'green')</script>",
+        "display" => "<script> let arg = '".$_SESSION['item']."';
+                throwAlert('You have selected:', arg, 'green')
+                </script>",
+        "deleted" => "<script>throwAlert('Success!', 'Entry successfully deleted!', 'green')</script>",
+        "invalidEntry" => "<script>throwAlert('Error!', 'Invalid entry!')</script>",
+        default => "<script>throwAlert('Error!', 'Please fill out the field!')</script>",
+    };
 }
+?>

@@ -10,6 +10,6 @@ if(isset($_POST["mySelect"])){
     }
     $_SESSION["status"] = "deleted";
 }else{
-    $_SESSION["status"] = "error";
+    $_SESSION["status"] = "invalidEntry";
 }
 header("location: ../index.php");
