@@ -16,15 +16,33 @@
     }
 }
 
+@font-face  {
+    font-family: "Poppins";
+    src: url("../misc/Poppins-Regular.ttf");
+}
+
 .container{
     display: inline-flex;
-    padding: 15px;
+    flex-wrap: wrap;
     width: calc(50% + 10vw);
+    height: calc(50% + 10vh);
     grid-column: 2 / 4;
     grid-row: 2 / 2;
+    padding: 15px;
     border-radius: 25px;
     box-shadow: -1px 3px 3px 2px rgba(0,0,0,25%);
     background-color: color-mix(in srgb, #FAF3F0, white 25%);
+    font-family: "Poppins", sans-serif;
+}
+
+.title-container{
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: center;
+}
+
+#title{
+    font-size: 26px;
 }
 
 .left-container{
@@ -42,6 +60,7 @@
     border-radius: 12px;
     outline: none;
     border: 1px solid black;
+    font-family: "Poppins", sans-serif;
 }
 
 .form-control{
@@ -50,16 +69,29 @@
 }
 
 .btn{
+    font-family: "Poppins", sans-serif;
     border: none;
     border-radius: 5px;
     padding: 6px;
     margin: 5px;
 }
 
+#btn-add{
+    background-color: #ADC4CE;
+}
+
+#btn-display{
+    background-color: #ADC4CE;
+}
+
+#btn-delete{
+    background-color: #ADC4CE;
+}
+
 .in-the-middle{
     flex: 1 0 50%;
     max-width: 0;
-    margin: 10px 25px 10px 25px;
+    margin: 15px 25px 15px 25px;
 }
 
 .right-container{
@@ -67,6 +99,7 @@
     flex-wrap: wrap;
     flex: 1 0 25%;
     grid-template: 45% 55% / none;
+    min-height: 98px;
 }
 
 .selection-container{
@@ -82,11 +115,14 @@
     outline: none;
     border: none;
     box-shadow: 1px 3px 3px 1px rgba(0,0,0,25%);
+    font-family: "Poppins", sans-serif;
 }
 
 #array-deletion-form{
     display: flex;
     width: 100%;
+    min-height: 43px;
+    max-height: 43px;
 }
 
 .alert-container{

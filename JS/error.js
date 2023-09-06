@@ -8,5 +8,10 @@ function throwAlert(emphasized, message, status){
         "</div>"
 
     div.style.color = (status === "" || status === undefined) ? "red": status;
+    div.style.animation = "bottom-top 2s ease-in";
+    setInterval(()=>{
+        div.style.animation = "fadeOut 0.5s ease-out";
+        setInterval(()=> div.remove(), 500);
+    },5000);
     parent.append(div);
 }

@@ -32,6 +32,9 @@ if(!isset($_SESSION["myArray"])) {
     </svg>
 
     <div class="container">
+        <div class="title-container">
+            <span id="title">Fruit Vending Shop</span>
+        </div>
         <div class="left-container">
             <form action="./operations/addOnArray.php" method="post" id="array-form">
                 <input type="text" name="input">
@@ -45,6 +48,7 @@ if(!isset($_SESSION["myArray"])) {
             <div class="selection-container">
                 <form action="./operations/deleteOnArray.php" method="post" id="array-deletion-form">
                     <select name="mySelect" id="array-selector">
+                        <option value=""></option>
                         <?php
                         foreach ($arr as $item){
                             echo "<option value='$item'>". $item ."</option>";
@@ -52,7 +56,7 @@ if(!isset($_SESSION["myArray"])) {
                         ?>
                     </select>
                     <button type="submit" formaction="./operations/selectOnArray.php" formmethod="post"
-                            class="btn" id="btn-delete">
+                            class="btn" id="btn-display">
                         Display
                     </button>
                     <button type="submit" class="btn" id="btn-delete">Delete</button>
@@ -72,6 +76,7 @@ if(isset($_SESSION["status"])){
                 throwAlert('You have selected:', arg, 'green')
                 </script>",
         "deleted" => "<script>throwAlert('Success!', 'Entry successfully deleted!', 'green')</script>",
+        "selectError" => "<script>throwAlert('Error!', 'Please select an entry!')</script>",
         "invalidEntry" => "<script>throwAlert('Error!', 'Invalid entry!')</script>",
         default => "<script>throwAlert('Error!', 'Please fill out the field!')</script>",
     };
