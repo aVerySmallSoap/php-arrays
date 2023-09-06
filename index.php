@@ -1,6 +1,6 @@
 <?php
 session_start();
-$arr = array("Sample 1", "Sample 2", "Sample 3");
+$arr = array("Apple", "Mango", "Orange", "Dragon Fruit", "Pineapple");
 if(!isset($_SESSION["myArray"])) {
     $_SESSION["myArray"] = $arr;
 }else{

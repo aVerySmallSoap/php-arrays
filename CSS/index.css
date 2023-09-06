@@ -2,10 +2,10 @@
     fill: none;
     transform: rotateZ(24deg);
     position: relative;
-    animation: "IamMoon" 10s;
+    animation: "slideMoon" 10s;
 }
 
-@keyframes IamMoon {
+@keyframes slideMoon {
     from{
         opacity: 0;
         left: -300px;
