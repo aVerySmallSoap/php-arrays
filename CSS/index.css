@@ -92,6 +92,8 @@
     flex: 1 0 50%;
     max-width: 0;
     margin: 15px 25px 15px 25px;
+    min-height: 10vh;
+    max-height: 10vh;
 }
 
 .right-container{

@@ -20,7 +20,6 @@ if(!isset($_SESSION["myArray"])) {
     <title>Document</title>
 </head>
 <body>
-
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="moon">
     <path  d="M11.0174 2.80157C6.37072 3.29221 2.75 7.22328 2.75 12C2.75 17.1086 6.89137
     21.25 12 21.25C16.7767 21.25 20.7078 17.6293 21.1984 12.9826C19.8717 14.6669 17.8126
@@ -30,7 +29,6 @@ if(!isset($_SESSION["myArray"])) {
     14.25C17.5882 14.25 19.4172 13.1373 20.4253 11.469C20.7293 10.9658 21.286 10.804 21.7237 10.8632C22.1787 10.9246
     22.75 11.2834 22.75 12C22.75 17.9371 17.9371 22.75 12 22.75C6.06294 22.75 1.25 17.9371 1.25 12Z" fill="#DBC4F0"/>
     </svg>
-
     <div class="container">
         <div class="title-container">
             <span id="title">Fruit Vending Shop</span>
@@ -64,21 +62,20 @@ if(!isset($_SESSION["myArray"])) {
             </div>
         </div>
     </div>
-
     <script src="./JS/error.js"></script>
+    <script src="./JS/btn-animation.js"></script>
 </body>
 </html>
 <?php
 if(isset($_SESSION["status"])){
     echo match ($_SESSION["status"]) {
-        "added" => "<script>throwAlert('Success!', 'Entry successfully added!', 'green')</script>",
-        "display" => "<script> let arg = '".$_SESSION['item']."';
-                throwAlert('You have selected:', arg, 'green')
-                </script>",
-        "deleted" => "<script>throwAlert('Success!', 'Entry successfully deleted!', 'green')</script>",
-        "selectError" => "<script>throwAlert('Error!', 'Please select an entry!')</script>",
-        "invalidEntry" => "<script>throwAlert('Error!', 'Invalid entry!')</script>",
-        default => "<script>throwAlert('Error!', 'Please fill out the field!')</script>",
+        "added" => "<script>throwAlert('Success!', 'Entry successfully added!', 'green');</script>",
+        "display" => "<script> let arg = '".$_SESSION['item']."';throwAlert('You have selected:', arg, 'green');
+        </script>",
+        "deleted" => "<script>throwAlert('Success!', 'Entry successfully deleted!', 'green');</script>",
+        "selectError" => "<script>throwAlert('Error!', 'Please select an entry!');</script>",
+        "invalidEntry" => "<script>throwAlert('Error!', 'Invalid entry!');</script>",
+        default => "<script>throwAlert('Error!', 'Please fill out the field!');</script>",
     };
 }
 ?>
